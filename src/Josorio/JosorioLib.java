@@ -1,3 +1,4 @@
+// Juan Osorio
 package Josorio;
 
 public class JosorioLib {
@@ -36,8 +37,22 @@ public class JosorioLib {
         String test = reverse(str);
         return (test.equals(str));
     }
-    public static String cutOut(String mainStr, String subStr){
-        String idx = mainStr.indexOf(subStr);
-        String result = mainStr.
+    public static String cutOut(String mainStr, String subStr) {
+        int end = mainStr.length();
+        int idx = mainStr.indexOf(subStr);
+        String pc1 = mainStr.substring(0,idx);
+        String pc2 = mainStr.substring(idx + subStr.length(),end);
+        return (pc1 + pc2);
+    }
+    public static String dateStr(String date){
+        String month = date.substring(0,2);
+        String day = date.substring(3,5);
+        String year = date.substring(6,10);
+        return(day+"-"+month+"-"+year);
+    }
+    public static String vigCipher(String message, String key){
+        String[] rubric;
+        
+
     }
 }
